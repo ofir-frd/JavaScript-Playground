@@ -1,0 +1,40 @@
+<html lang="">
+
+<head>
+        <title>Play03</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let i;
+        let j;
+        let result;
+        let user_input = prompt("Enter a character", "Enter...");
+
+        for(i=1; i<10;i++){
+            document.write("number:" + i  + "<br>");
+            result = i++
+            document.write("++ before value:" + result  + "<br>");
+            result = ++i
+            document.write("++ after value:" + result  + "<br>");
+        }
+
+        switch(user_input){
+            case "a":
+                document.write("A is a vowel <br>");
+                break;
+            default:
+                document.write("switch terminated <br>");
+        }
+
+        for(i=1; i<3;i++){
+            for(j=1; j<3;j++){
+                let message = (i>1 && j<2) ? "Great" : "Not so great"
+                document.write(message + "<br>");
+                }
+        }
+        
+    </script>
+</body>
+</html>
