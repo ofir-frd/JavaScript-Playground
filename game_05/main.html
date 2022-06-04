@@ -1,0 +1,24 @@
+<html lang="">
+
+<head>
+        <title>game_05 - Cookies</title>
+        <script type="text/javascript">
+            function write_cookie(){
+                if (document.myform.new_name.value == ""){
+                    alert("Missing Value");
+                    return;
+                }
+                let new_cookie = escape(document.myform.new_name.value);
+                document.cookie = "name=" + new_cookie;
+                document.write("Cookie saved: " + document.cookie);
+            }
+        </script>
+</head>
+
+<body>
+    <form name="myform" action="">
+        <input name="new_name" placeholder="Enter User name"><br>
+        <input type=button" value="Save cookie" onclick="write_cookie()">
+    </form>
+</body>
+</html>
