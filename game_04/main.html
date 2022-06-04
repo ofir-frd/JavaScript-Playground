@@ -1,0 +1,45 @@
+<html lang="">
+
+<head>
+        <title>game_04 - functions</title>
+        <script type="text/javascript">
+            function hello_world(){
+                document.write("Hello!")
+            }
+
+            function hello_name(name){
+                if (name) {
+                    document.write("Hello, " + name + " !")
+                }
+                else{
+                    name = "anonymus"
+                    document.write("Hello, " + name + " !")
+                }
+            }
+
+             function mouse_over(){
+                document.querySelector('#hello_button').value = 'Press here';
+            }
+
+             function mouse_out(){
+                document.querySelector('#hello_button').value = 'Come back!';
+            }
+        </script>
+</head>
+
+<body>
+    <p>Click Here to call a JS function:</p>
+
+    <form>
+        <input type=button" onclick="hello_world()" value="Say Hi">
+    </form>
+
+    <p>Click Here to call a JS function wit hvariables:</p>
+
+    <form>
+        <input name="new_name" placeholder="Enter Name"><br>
+        <input id="hello_button" type=button" onclick="hello_name(new_name.value)" value="Say Hi" onmouseover="mouse_over()"
+               onmouseout="mouse_out()">
+    </form>
+</body>
+</html>
